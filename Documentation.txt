@@ -1,0 +1,29 @@
+Brandon Woo
+Project B0 - Getting Started with Unity
+
+Link to game in itch.io : https://airwoo.itch.io/woo-project-b0-two-player-ball-battle-royale
+
+Documentation : 
+
+Player 1 Controls:			Player 2 Controls:
+Up: W					Up: I
+Down: S					Down: K
+Left: A					Left: J
+Right: D				Right: L
+Jump: Space Bar				Jump: H
+
+A two player game where users can use the forces of push and pull to control the ball. Players also have the ability to jump. The main objective of the game is to score as many points as possible in a two minute span. Collecting coins are 1 point. Colliding with the wall is -1 point. And colliding with the enemy ball player has two results, higher altitude (greater transform.position.y) gains 3 points and lower altitude (lower transform.position.y) loses 2 points. Platforms are there to be used to gain advantages in the fights in mid-air. The player with the highest amount of points wins when the time reaches zero. But be careful because no matter how many points you have accumulated, if your ball player falls off the map you will automatically lose. Have fun!
+
+Additional Information:
+- Game played offline works for Microsoft edge
+- Ball jumps can not be spammed, which means ball is only able to jump when it is grounded or touching a surface with the tag "grounded". This prevents jumps from being too unrealistic and overpowered.
+- Start menu/first scene is a basic menu to introduce the controls to the players and give them time to start when they are ready. Start button is interactive and will allow the players when pressed to load into the game scene.
+- On the bottom of the game scene there is a restart button which allows players to reload the game scene with resetted stats.
+- Large plane is instantiated below the playing field, when ball collides with this plane it will trigger the script that destroys the game object and ends the time countdown and declares the survivor the winner. It will then wait for the players to reset the game to play again.
+
+Extra Credit:
+Below the time countdown, I have implemented an UI text that updates and makes announcments to the players real time. 
+- Every collision between the balls where one of the balls has an advantage in altitude.
+- Half the time is remaining : when time countdown reaches 1:00
+- Time is almost up : when the time countdown reaches 0:10
+- Who wins the game : depends on who fell off map or points
